@@ -1,0 +1,42 @@
+public static int[] insertionSort(int[] A, int n) { 
+	for (int i = 1; i < N; ++i) {
+		int key = A[i]; 
+		int j = i - 1;
+		while (j >= 0 && A[j] > key) { 
+			A[j + 1] = A[j];
+			j = j - 1; 
+		}
+
+		A[j + 1] = key; 
+	}
+	return A; 
+}
+
+Best Case: 
+- Best Case: The best-case scenario occurs when the input array is already sorted. In this case, the algorithm just passes through every element once, so there are N-1 comparisons and 0 swaps, making the best-case time complexity O(N), where N is the number of elements in the array.
+
+- Average Case: for every i-th element, it gets compared with i elements of the sorted part of the array. So for N elements, it would be N*(N-1)/2 comparisons and swaps. So, the average-case time complexity is O(N^2).
+
+- Worst Case: The worst-case scenario occurs when the input array is sorted in reverse order. This means that for each number, the algorithm will have to move the number all the way to the beginning of the array. The time complexity in this case will be O(N^2), because every possible comparison and swap will be made.
+
+MATRIX_MULTIPLY(A, B): 
+  if columns(A) ≠ rows(B): 
+    raise ValueError("Matrix multiplication is not defined.") 
+
+  rows_A ← number of rows in A 
+  cols_A ← number of columns in A 
+  cols_B ← number of columns in B 
+  result ← matrix of size rows_A x cols_B filled with zeros 
+
+  for i from 1 to rows_A do: 
+    for j from 1 to cols_B do: 
+    sum ← 0 
+      for k from 1 to cols_A do: 
+        sum ← sum + A[i][k] * B[k][j] 
+      result[i][j] ← sum return result
+
+- Best Case: The time to run this algorithm depends on the dimensions of the matrices, not the actual configuration of individual elements within those matrices. As such, even in the best case scenario, it'll take on average about rows_A * cols_A * cols_B operations. So the best case time complexity is O(rows_A * cols_A * cols_B).
+
+- Average Case: As with the best case, individual elements of A and B don't matter as we always need to do rows_A * cols_A * cols_B multiplications and the same number of additions, regardless of the input data. So, the average case time complexity is also O(rows_A * cols_A * cols_B).
+
+- Worst Case: Similarly, even in the worst case scenario, it takes on average about rows_A * cols_A * cols_B operations. So the worst case time complexity is also O(rows_A * cols_A * cols_B).
