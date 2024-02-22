@@ -1,25 +1,28 @@
-def threeSum(nums):
-    nums.sort()
-    result = []
-    for i in range(len(nums)-2):
-        if i > 0 and nums[i] == nums[i-1]:
-            continue
-        l, r = i+1, len(nums)-1
-        while l < r:
-            s = nums[i] + nums[l] + nums[r]
-            if s < 0:
-                l +=1 
-            elif s > 0:
-                r -= 1
-            else:
-                result.append((nums[i], nums[l], nums[r]))
-                while l < r and nums[l] == nums[l+1]:
+from typing import List
+
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        nums.sort()
+        result = []
+        for i in range(len(nums) - 2):
+            if i > 0 and nums[i] == nums[i-1]:
+                continue
+            l, r = i+1, len(nums) - 1
+            while l < r:
+                s = nums[i] + nums[l] + nums[r]
+                if s < 0:
                     l += 1
-                while l < r and nums[r] == nums[r-1]:
+                elif s > 0:
                     r -= 1
-                l += 1; r -= 1
-    return result
+                else:
+                    result.append([nums[i], nums[l], nums[r]])
+                    while l < r and nums[l] == nums[l+1]:
+                        l += 1
+                    while l < r and nums[r] == nums[r-1]:
+                        r -= 1
+                    l += 1
+                    r -= 1
+        return result
 
-
-print(threeSum([-5,0,5,10,-10,0])) # expected output is [[-10, 0, 10], [-5, 0, 5]]
-print(threeSum([0,1,1])) # expected output is []
+s = Solution()
+print(s.threeSum([-5,0,5,10,-10,0,1,0,-1]))

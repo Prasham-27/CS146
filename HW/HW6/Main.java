@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        int[] nums = {-5,0,5,10,-10,0};
+        int[] nums = {-5,0,5,10,-10,0,1,0,-1};
         System.out.println(threeSum(nums));
     }
 
