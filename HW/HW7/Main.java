@@ -3,8 +3,6 @@ package HW.HW7;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-import HW.HW2.Solution;
-
 public class Main {
     public int minMeetingRooms(int[][] intervals) {
         if (intervals.length == 0) {
@@ -43,5 +41,5 @@ public class Main {
 
     int[][] intervals2 = {{0, 1},{1, 2},{2, 3}};
     System.out.println(sol.minMeetingRooms(intervals2)); // prints 1
-}
+    }
 }

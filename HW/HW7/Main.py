@@ -1,5 +1,5 @@
 import heapq
-class Solution:
+class Main:
     def minMeetingRooms(self, intervals: list[list[int]]) -> int:
         # If there is no job, no server is needed.
         if not intervals:
@@ -27,9 +27,8 @@ class Solution:
         # The size of heap tells us the minimum
         # number of servers needed.
         return len(free_rooms)
-
-# Create an instance of Solution class        
-sol = Solution()
+   
+sol = Main()
 
 # Test the minMeetingRooms() method using two different data sets
 intervals1 = [[0, 30],[5, 10],[15, 20]]
