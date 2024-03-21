@@ -1,8 +1,4 @@
-package CS146.Extra
-
 import java.util.ArrayList;
-
-Credit.EEAAO;
 
 public class Graph {
     private ArrayList<ArrayList<Integer>> adjList;
