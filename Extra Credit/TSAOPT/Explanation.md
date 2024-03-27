@@ -34,7 +34,7 @@
    
      - In each iteration, we pop a vertex from the stack. For all its unvisited neighbors, we add them to the stack and mark them as visited. 
    
-     - Remember that we are effectively "diving" as far into the graph as we can before "backtracking" and exploring alternate routes.
+     - we are effectively "diving" as far into the graph as we can before "backtracking" and exploring alternate routes.
    
 
 5. Defining the graph and vertices: We define a dictionary (`graph`) where each key-value pair represents a node and its corresponding connected nodes. We also define a list (`vertices`) that contains all the nodes of our graph. These are going to be the inputs for our topological sorting functions.
