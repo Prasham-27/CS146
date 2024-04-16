@@ -9,6 +9,8 @@ Go through connections (one by one):
 If connecting two houses wouldn't create a loop (cycle), we build that connection (add the cost).
 The "Union-Find" helps us avoid making loops (like accidentally creating a circle on the map).
 In the end, the total cost is the sum of the costs of the connections we built.
+
+
 Approach 2: Prim's Algorithm (like a growing web):
 
 Create a map of connections:
